@@ -1,0 +1,21 @@
+{
+  "options": {
+    "config": ".jscsrc",
+    "esnext": true,
+    "verbose": true
+  },
+
+  "status": {
+    "src": ["<%= paths.scripts.all %>"],
+    "options": {
+      "force": true
+    }
+  },
+
+  "write": {
+    "src": ["<%= paths.scripts.all %>"],
+    "options": {
+      "fix": true
+    }
+  }
+}
