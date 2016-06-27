@@ -3,12 +3,11 @@
 const app = require('../app.js');
 
 const userScoreSuccess = (data) => {
-  console.log(data);
+  app.games = data.games;
 };
 
 const createGameSuccess = (data) => {
   app.game = data.game;
-  console.log(app.game);
 };
 
 module.exports = {

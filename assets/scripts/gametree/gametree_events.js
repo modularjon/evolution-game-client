@@ -6,7 +6,6 @@ const app = require('../app.js');
 
 const onGetUserScore = function(event) {
   event.preventDefault();
-  console.log(app.games.length)
   api.indexGames()
     .done(ui.userScoreSuccess)
     .fail(ui.failure);
