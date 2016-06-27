@@ -2,14 +2,14 @@
 
 const app = require('../app.js');
 
-const success = (data) => {
-  $('.game-message').text('Success!');
-  if (data) {
-    console.log(data);
-  } else {
-    console.log('Success');
-  }
-};
+// const success = (data) => {
+//   $('.game-message').text('Success!');
+//   if (data) {
+//     console.log(data);
+//   } else {
+//     console.log('Success');
+//   }
+// };
 
 const failure = (error) => {
   $('.game-message').text("Sorry, it didn\'t work, try again!");
@@ -21,24 +21,24 @@ const signUpSuccess = function() {
   $('form').trigger('reset');
 };
 
-const signInSuccess = (data) => {
-  app.user = data.user;
-  $('.signed-out').hide();
-  $('.signed-in').show();
-  console.log(app.user);
-};
-
-const signOutSuccess = () => {
-  console.log('User signed out successfully');
-  $('.signed-in').hide();
-  $('.signed-out').show();
-  app.user = null;
-};
+// const signInSuccess = (data) => {
+//   app.user = data.user;
+//   $('.signed-out').hide();
+//   $('.signed-in').show();
+//   console.log(app.user);
+// };
+//
+// const signOutSuccess = () => {
+//   console.log('User signed out successfully');
+//   $('.signed-in').hide();
+//   $('.signed-out').show();
+//   app.user = null;
+// };
 
 module.exports = {
-  success,
+  // success,
   failure,
-  signUpSuccess,
-  signInSuccess,
-  signOutSuccess
+  signUpSuccess
+  // signInSuccess,
+  // signOutSuccess
 };
