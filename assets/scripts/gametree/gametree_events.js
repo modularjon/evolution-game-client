@@ -2,9 +2,11 @@
 
 const api = require('./gametree_api');
 const ui = require('./gametree_ui');
+const app = require('../app.js');
 
 const onGetUserScore = function(event) {
   event.preventDefault();
+  console.log(app.games.length)
   api.indexGames()
     .done(ui.userScoreSuccess)
     .fail(ui.failure);
@@ -18,7 +20,7 @@ const onCreateGame = function(event) {
 };
 
 const addHandlers = () => {
-  $('.user-score').on('click', onGetUserScore);
+  $('.get-user-score').on('click', onGetUserScore);
   $('.new-game').on('click', onCreateGame);
 };
 
