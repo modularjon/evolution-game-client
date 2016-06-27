@@ -12,6 +12,7 @@ const success = (data) => {
 };
 
 const failure = (error) => {
+  $('.game-message').text("Sorry, it didn\'t work, try again!");
   console.error(error);
 };
 
