@@ -3,6 +3,7 @@
 const app = require('../app.js');
 
 const success = (data) => {
+  $('.game-message').text('Success!');
   if (data) {
     console.log(data);
   } else {
