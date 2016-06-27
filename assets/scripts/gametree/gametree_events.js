@@ -1,6 +1,7 @@
 'use strict';
 
 const api = require('./gametree_api');
+const ui = require('./gametree_ui');
 
 const onGetUserScore = function(event) {
   event.preventDefault();
