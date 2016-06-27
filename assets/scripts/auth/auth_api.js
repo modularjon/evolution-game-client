@@ -6,18 +6,18 @@ const signUp = (data) => {
   return $.ajax({
     url: app.host + '/sign-up',
     method: "POST",
-    data,
+    data
   });
 };
 
-// const signIn = (data) => {
-//   return $.ajax({
-//     url: app.host + '/sign-in',
-//     method: "POST",
-//     data: data,
-//   });
-// };
-//
+const signIn = (data) => {
+  return $.ajax({
+    url: app.host + '/sign-in',
+    method: "POST",
+    data
+  });
+};
+
 // const signOut = () => {
 //   return $.ajax({
 //     url: app.host + '/sign-out/' + app.user.id,
@@ -40,8 +40,8 @@ const signUp = (data) => {
 // };
 
 module.exports = {
-  signUp
-  // signIn,
+  signUp,
+  signIn
   // signOut,
   // changePassword,
 };

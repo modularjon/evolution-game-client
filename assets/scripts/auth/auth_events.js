@@ -14,14 +14,14 @@ const onSignUp = (event) => {
     .fail(ui.failure);
 };
 
-// const onSignIn = (event) => {
-//   event.preventDefault();
-//   let data = getFormFields(event.target);
-//   api.signIn(data)
-//     .done(ui.signInSuccess)
-//     .fail(ui.failure);
-// };
-//
+const onSignIn = (event) => {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  api.signIn(data)
+    .done(ui.signInSuccess)
+    .fail(ui.failure);
+};
+
 // const onSignOut = (event) => {
 //   event.preventDefault();
 //   api.signOut()
@@ -40,7 +40,7 @@ const onSignUp = (event) => {
 
 const addHandlers = () => {
   $('.sign-up').on('submit', onSignUp);
-  // $('#sign-in').on('submit', onSignIn);
+  $('.sign-in').on('submit', onSignIn);
   // $('#sign-out').on('submit', onSignOut);
   // $('#change-password').on('submit', onChangePassword);
 };
