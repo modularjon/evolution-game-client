@@ -32,17 +32,21 @@ const signInSuccess = (data) => {
   $('form').trigger('reset');
 };
 
-// const signOutSuccess = () => {
-//   console.log('User signed out successfully');
-//   $('.signed-in').hide();
-//   $('.signed-out').show();
-//   app.user = null;
-// };
+const signOutSuccess = () => {
+  console.log('User signed out successfully');
+  $('.sign-up').show();
+  $('.sign-in').show();
+  $('.sign-out').hide();
+  $('.change-password').hide();
+  $('.signed-in').text('');
+  $('.game-message').text('Sign in to start!');
+  app.user = null;
+};
 
 module.exports = {
   success,
   failure,
   signUpSuccess,
-  signInSuccess
-  // signOutSuccess
+  signInSuccess,
+  signOutSuccess,
 };

@@ -22,13 +22,13 @@ const onSignIn = (event) => {
     .fail(ui.failure);
 };
 
-// const onSignOut = (event) => {
-//   event.preventDefault();
-//   api.signOut()
-//     .done(ui.signOutSuccess)
-//     .fail(ui.failure);
-// };
-//
+const onSignOut = (event) => {
+  event.preventDefault();
+  api.signOut()
+    .done(ui.signOutSuccess)
+    .fail(ui.failure);
+};
+
 // const onChangePassword = (event) => {
 //   event.preventDefault();
 //   let data = getFormFields(event.target);
@@ -41,7 +41,7 @@ const onSignIn = (event) => {
 const addHandlers = () => {
   $('.sign-up').on('submit', onSignUp);
   $('.sign-in').on('submit', onSignIn);
-  // $('#sign-out').on('submit', onSignOut);
+  $('.sign-out').on('submit', onSignOut);
   // $('#change-password').on('submit', onChangePassword);
 };
 
