@@ -1,20 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
 
-      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+<head>
+  <title>Example</title>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
+  <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+  <div class="board">
+    <div class="row row-centered">
+      <div class="col-xs-2 col-centered" id="cell-0"></div>
+      <div class="col-xs-2 col-centered" id="cell-1"></div>
+      <div class="col-xs-2 col-centered" id="cell-2"></div>
+      <div class="col-xs-6 col-centered game-info">
+        <button id="new-game" style="display: none">Start a new game!</button>
+      </div>
+    </div>
+    <div class="row row-centered">
+      <div class="col-xs-2 col-centered" id="cell-3"></div>
+      <div class="col-xs-2 col-centered" id="cell-4"></div>
+      <div class="col-xs-2 col-centered" id="cell-5"></div>
+      <div class="col-xs-6 col-centered game-info">
+        <button id="index-games" style="display: none">Get number of games played!</button>
+        <div id="number-played"></div>
+      </div>
+    </div>
+    <div class="row row-centered">
+      <div class="col-xs-2 col-centered" id="cell-6"></div>
+      <div class="col-xs-2 col-centered" id="cell-7"></div>
+      <div class="col-xs-2 col-centered" id="cell-8"></div>
+      <div class="col-xs-6 col-centered game-info">
+
+        <!-- future form to allow users to retreive previous games -->
+
+        <!-- <form id="find-game" style="display: none">
+        <fieldset>
+          <legend>Recall a game!</legend>
+          <input id="find-game-text" type="text" name="id" placeholder="Game Index!">
+          <input type="submit" name="submit" value="Get it!">
+        </fieldset>
+      </form> -->
+      </div>
+    </div>
+    <div class="row row-centered">
+      <div class="col-xs-6 col-centered game-message">Sign in to start!</div>
+      <div class="col-xs-6"></div>
+    </div>
+  </div>
+
+  <form id="sign-up">
+    <fieldset>
+      <legend>Sign up!</legend>
+      <input type="text" name="credentials[email]" placeholder="Enter your email!">
+      <input type="password" name="credentials[password]" placeholder="Enter your password!">
+      <input type="password" name="credentials[password_confirmation]" placeholder="Password again!">
+      <input type="submit" name="submit" value="Sign up!">
+    </fieldset>
+  </form>
+
+  <form id="sign-in">
+    <fieldset>
+      <legend>Sign in!</legend>
+      <input type="text" name="credentials[email]" placeholder="Enter your email!">
+      <input type="password" name="credentials[password]" placeholder="Enter your password!">
+      <input type="submit" name="submit" value="Sign in!">
+    </fieldset>
+  </form>
+
+  <div id="signed-in"></div>
+
+  <form id="sign-out" style="display: none">
+    <fieldset>
+      <legend>Sign out!</legend>
+      <input type="submit" name="submit" value="Sign out!">
+    </fieldset>
+  </form>
+
+  <form id="change-password" style="display: none">
+    <fieldset>
+      <legend>Change password!</legend>
+      <input type="password" name="passwords[old]" placeholder="Old password!">
+      <input type="password" name="passwords[new]" placeholder="New password!">
+      <input type="submit" name="submit" value="Change it!">
+    </fieldset>
+  </form>
+
+</body>
+
 </html>
