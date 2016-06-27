@@ -38,6 +38,7 @@ const signOutSuccess = () => {
 module.exports = {
   success,
   failure,
+  signUpSuccess,
   signInSuccess,
   signOutSuccess
 };
