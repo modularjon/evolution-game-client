@@ -16,6 +16,11 @@ const failure = (error) => {
   console.error(error);
 };
 
+const signUpSuccess = function() {
+  $('.game-message').text("Signed up!");
+  $('form').trigger('reset');
+};
+
 const signInSuccess = (data) => {
   app.user = data.user;
   $('.signed-out').hide();
