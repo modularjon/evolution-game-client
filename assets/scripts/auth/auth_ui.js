@@ -28,7 +28,7 @@ const signInSuccess = (data) => {
   $('.sign-out').show();
   $('.change-password').show();
   $('.signed-in').text('Signed in as: ' + app.user.email);
-  $('.game-message').text('Start a new game or recall an old one!');
+  $('.game-message').text('Start a new game!');
   $('form').trigger('reset');
 };
 
@@ -43,10 +43,16 @@ const signOutSuccess = () => {
   app.user = null;
 };
 
+const changePasswordSuccess = function() {
+  $('.game-message').text("Password changed successfully!");
+  $('form').trigger('reset');
+};
+
 module.exports = {
   success,
   failure,
   signUpSuccess,
   signInSuccess,
   signOutSuccess,
+  changePasswordSuccess
 };

@@ -28,20 +28,20 @@ const signOut = () => {
   });
 };
 
-// const changePassword = (data) => {
-//   return $.ajax({
-//     url: app.host + '/change-password/' + app.user.id,
-//     method: "PATCH",
-//     headers: {
-//       Authorization: 'Token token=' + app.user.token,
-//     },
-//     data: data,
-//   });
-// };
+const changePassword = (data) => {
+  return $.ajax({
+    url: app.host + '/change-password/' + app.user.id,
+    method: "PATCH",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    data: data,
+  });
+};
 
 module.exports = {
   signUp,
   signIn,
   signOut,
-  // changePassword,
+  changePassword,
 };
