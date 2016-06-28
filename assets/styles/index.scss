@@ -27,6 +27,11 @@ legend {
   border-radius: 8vw;
 }
 
+.shift {
+  left: 6vw;
+  position: relative;
+}
+
 .row-centered {
   // use viewport width to expand content responsively in parallel with columns,
   font-size: 8vw;
