@@ -1,18 +1,26 @@
 'use strict';
 
-let tray = ['','','',''];
+const app = require('../app.js');
 
-let tree = ['','','',''];
+let solution = [];
 
-let game_solved = false;
+let tray = [];
+
+let tree = [];
+
+Array.prototype.shuffled = function() {
+  return this.map(function(n){ return [Math.random(), n] })
+             .sort().map(function(n){ return n[1] });
+};
 
 const gameSolved = function(tray, tree) {
-  if (tray == tree) {
+  if (tray === tree) {
     game_solved = true;
   }
 };
 
 module.exports = {
+  solution,
   tray,
   tree,
   gameSolved,
