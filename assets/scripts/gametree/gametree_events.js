@@ -26,7 +26,7 @@ const onTraySelect = function(event) {
     return;
   }
 
-  logic.selection = 
+  logic.selection = $(event.target).text();
 };
 
 const addHandlers = () => {
