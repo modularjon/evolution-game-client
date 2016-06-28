@@ -30,10 +30,15 @@ const onTraySelect = function(event) {
   $('.game-message').text('Now select a position within the tree.');
 };
 
+const onTreeSelect = function(event) {
+  event.preventDefault();
+};
+
 const addHandlers = () => {
   $('.get-user-score').on('click', onGetUserScore);
   $('.new-game').on('click', onCreateGame);
   $('.tray').on('click', onTraySelect);
+  $('.child').on('click', onTreeSelect);
 };
 
 module.exports = {
