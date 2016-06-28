@@ -9,46 +9,6 @@
 </head>
 
 <body class="container-fluid">
-  <div class="board">
-    <div class="row row-centered">
-      <div class="col-xs-2 col-centered" id="cell-0"></div>
-      <div class="col-xs-2 col-centered" id="cell-1"></div>
-      <div class="col-xs-2 col-centered" id="cell-2"></div>
-      <div class="col-xs-6 col-centered game-info">
-        <button class="new-game" style="display: none">Start a new game!</button>
-      </div>
-    </div>
-    <div class="row row-centered">
-      <div class="col-xs-2 col-centered" id="cell-3"></div>
-      <div class="col-xs-2 col-centered" id="cell-4"></div>
-      <div class="col-xs-2 col-centered" id="cell-5"></div>
-      <div class="col-xs-6 col-centered game-info">
-        <button class="get-user-score" style="display: none">Get your score!</button>
-        <div class="show-user-score"></div>
-      </div>
-    </div>
-    <div class="row row-centered">
-      <div class="col-xs-2 col-centered" id="cell-6"></div>
-      <div class="col-xs-2 col-centered" id="cell-7"></div>
-      <div class="col-xs-2 col-centered" id="cell-8"></div>
-      <div class="col-xs-6 col-centered game-info">
-
-        <!-- future form to allow users to retreive previous games -->
-
-        <!-- <form id="find-game" style="display: none">
-        <fieldset>
-          <legend>Recall a game!</legend>
-          <input id="find-game-text" type="text" name="id" placeholder="Game Index!">
-          <input type="submit" name="submit" value="Get it!">
-        </fieldset>
-      </form> -->
-      </div>
-    </div>
-    <div class="row row-centered">
-      <div class="col-xs-6 col-centered game-message">Sign in to start!</div>
-      <div class="col-xs-6"></div>
-    </div>
-  </div>
 
   <form class="sign-up">
     <fieldset>
@@ -86,6 +46,43 @@
       <input type="submit" name="submit" value="Change it!">
     </fieldset>
   </form>
+  
+  <div class="game-interaction col-xs-10 col-centered">
+    <div class="row row-centered">
+      <div class="col-xs-6 col-centered game-message">Sign in to start!</div>
+      <div class="col-xs-6"></div>
+    </div>
+    <div class="col-xs-6 col-centered game-info" style="display:none">
+      <button class="new-game">Start a new game!</button>
+    </div>
+    <div class="col-xs-6 col-centered game-info" style="display:none">
+      <button class="get-user-score">Get your score!</button>
+      <div class="show-user-score"></div>
+    </div>
+  </div>
+
+  <div class="gametree col-xs-10 col-centered">
+    <div class="row row-centered">
+      <div class="col-xs-4 col-centered left bottom"></div>
+      <div class="col-xs-4 col-centered"></div>
+      <div class="col-xs-4 col-centered"></div>
+    </div>
+    <div class="row row-centered">
+      <div class="col-xs-4 col-centered left bottom"></div>
+      <div class="col-xs-4 col-centered bottom"></div>
+      <div class="col-xs-4 col-centered"></div>
+    </div>
+    <div class="row row-centered">
+      <div class="col-xs-4 col-centered left bottom"></div>
+      <div class="col-xs-4 col-centered bottom"></div>
+      <div class="col-xs-4 col-centered bottom"></div>
+    </div>
+    <div class="row row-centered">
+      <div class="col-xs-4 col-centered left"></div>
+      <div class="col-xs-4 col-centered"></div>
+      <div class="col-xs-4 col-centered"></div>
+    </div>
+  </div>
 
 </body>
 
