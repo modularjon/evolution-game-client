@@ -27,9 +27,10 @@ const signInSuccess = (data) => {
   $('.sign-in').hide();
   $('.sign-out').show();
   $('.change-password').show();
-  $('.new-game').show();
-  $('.get-user-score').show();
-  $('.show-user-score').show();
+  $('.game-info').show();
+  // $('.new-game').show();
+  // $('.get-user-score').show();
+  // $('.show-user-score').show();
   $('.signed-in').text('Signed in as: ' + app.user.email);
   $('.game-message').text('Start a new game!');
   $('form').trigger('reset');
@@ -41,9 +42,10 @@ const signOutSuccess = () => {
   $('.sign-in').show();
   $('.sign-out').hide();
   $('.change-password').hide();
-  $('.new-game').hide();
-  $('.get-user-score').hide();
-  $('.show-user-score').hide();
+  $('.game-info').hide();
+  // $('.new-game').hide();
+  // $('.get-user-score').hide();
+  // $('.show-user-score').hide();
   $('.signed-in').text('');
   $('.show-user-score').text('');
   $('.game-message').text('Sign in to start!');
