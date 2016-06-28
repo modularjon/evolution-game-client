@@ -21,6 +21,12 @@ const onCreateGame = function(event) {
 
 const onTraySelect = function(event) {
   event.preventDefault();
+
+  if (logic.gameSolved || !app.user || !app.game) {
+    return;
+  }
+
+  logic.selection = 
 };
 
 const addHandlers = () => {
