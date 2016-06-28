@@ -27,6 +27,7 @@ const onTraySelect = function(event) {
   }
 
   logic.selection = $(event.target).text();
+  $('.game-message').text('Now select a position within the tree.');
 };
 
 const addHandlers = () => {

@@ -32,6 +32,7 @@ const createGameSuccess = (data) => {
   $('.tray[data-id="2"]').text(logic.tray[2]);
   $('.tray[data-id="3"]').text(logic.tray[3]);
   $('.child').text('');
+  $('.game-message').text('Select an animal from the tray to start.')
 };
 
 module.exports = {
