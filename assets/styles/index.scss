@@ -12,13 +12,19 @@ button,
 form,
 input,
 legend {
-  font-size: 2vw;
   float: left;
+  font-size: 2vw;
 }
 
 .gametree {
-  margin-left: 3vw;
+  margin-left: 6vw;
   margin-top: 3vw;
+}
+
+.tray,
+.child,
+.parent {
+  border-radius: 8vw;
 }
 
 .row-centered {
