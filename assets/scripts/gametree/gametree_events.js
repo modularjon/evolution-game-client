@@ -3,6 +3,7 @@
 const api = require('./gametree_api');
 const ui = require('./gametree_ui');
 const app = require('../app.js');
+const logic = require('./gametree_logic');
 
 const onGetUserScore = function(event) {
   event.preventDefault();
