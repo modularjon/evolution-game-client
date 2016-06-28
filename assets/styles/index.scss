@@ -1,2 +1,68 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+$background-color: #fefefe;
+$font-color: #0c0c0c;
+
+body {
+  background-color: $background-color;
+  color: $font-color;
+}
+
+button,
+form,
+input,
+legend {
+  font-size: 2vw;
+  float: left;
+}
+
+.gametree {
+  margin-left: 3vw;
+  margin-top: 3vw;
+}
+
+.row-centered {
+  // use viewport width to expand content responsively in parallel with columns,
+  font-size: 8vw;
+  text-align: center;
+}
+
+.col-centered {
+  display: inline-block;
+  height: 14vw;
+  text-align: center;
+}
+
+.game-info {
+  padding-left: 6vw;
+}
+
+.game-message {
+  font-size: 3vw;
+  height: 14vw;
+  padding-top: 4vw;
+}
+
+.signed-in {
+  font-size: 3vw;
+}
+
+.show-user-score {
+  font-size: 3vw;
+}
+
+.top {
+  border-top: .5vw solid $font-color;
+}
+
+.right {
+  border-right: .5vw solid $font-color;
+}
+
+.bottom {
+  border-bottom: .5vw solid $font-color;
+}
+
+.left {
+  border-left: .5vw solid $font-color;
+}
