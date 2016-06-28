@@ -15,4 +15,5 @@ const gameSolved = function(tray, tree) {
 module.exports = {
   tray,
   tree,
+  gameSolved,
 };
