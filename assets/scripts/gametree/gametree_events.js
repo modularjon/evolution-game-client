@@ -32,6 +32,10 @@ const onTraySelect = function(event) {
 
 const onTreeSelect = function(event) {
   event.preventDefault();
+
+  logic.tree[$(event.target).data('id')] = logic.selection;
+  $(event.target).text(logic.selection);
+  $('.game-message').text("Now pick another from the tray. When you've got them all filled, click submit!");
 };
 
 const addHandlers = () => {
