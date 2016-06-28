@@ -19,9 +19,14 @@ const onCreateGame = function(event) {
     .fail(ui.failure);
 };
 
+const onTraySelect = function(event) {
+  event.preventDefault();
+};
+
 const addHandlers = () => {
   $('.get-user-score').on('click', onGetUserScore);
   $('.new-game').on('click', onCreateGame);
+  $('.tray').on('click', onTraySelect);
 };
 
 module.exports = {
