@@ -220,6 +220,7 @@ webpackJsonp([0],[
 	  host: 'https://evolution-project.herokuapp.com'
 	};
 
+	// host: 'http://localhost:3000',
 	module.exports = app;
 
 /***/ },
@@ -469,6 +470,7 @@ webpackJsonp([0],[
 
 	var userScoreSuccess = function userScoreSuccess(data) {
 	  app.games = data.games;
+
 	  $('.show-user-score').text(app.games.filter(function (obj) {
 	    return obj.game_solved;
 	  }).length);
