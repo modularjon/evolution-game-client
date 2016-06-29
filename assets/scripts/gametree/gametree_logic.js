@@ -17,10 +17,16 @@ Array.prototype.shuffled = function() {
              .sort().map(function(n){ return n[1] });
 };
 
-const isGameSolved = function(tray, tree) {
-  if (tray === tree) {
-    gameSolved = true;
+const isGameSolved = function(solution, tree) {
+  let i = solution.length;
+
+  while (i--) {
+    if (solution[i] !== tree[i]) {
+      return false;
+    }
   }
+
+  return true;
 };
 
 module.exports = {
