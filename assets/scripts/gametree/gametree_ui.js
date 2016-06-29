@@ -11,6 +11,8 @@ const userScoreSuccess = (data) => {
 const createGameSuccess = (data) => {
   app.game = data.game;
 
+  logic.gameSolved = false;
+  
   let solution = app.game.child_taxons;
   let tray = app.game.child_taxons.shuffled();
 
