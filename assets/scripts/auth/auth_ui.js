@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require('../app.js');
+const logic = require('../gametree/gametree_logic');
 
 const success = (data) => {
   $('.game-message').text('Success!');
@@ -37,7 +38,6 @@ const signInSuccess = (data) => {
 };
 
 const signOutSuccess = () => {
-  console.log('User signed out successfully');
   $('.sign-up').show();
   $('.sign-in').show();
   $('.sign-out').hide();
@@ -46,6 +46,9 @@ const signOutSuccess = () => {
   // $('.new-game').hide();
   // $('.get-user-score').hide();
   // $('.show-user-score').hide();
+  $('.tray').text('');
+  $('.parent').text('');
+  $('.child').text('');
   $('.signed-in').text('');
   $('.show-user-score').text('');
   $('.game-message').text('Sign in to start!');
