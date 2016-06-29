@@ -1,18 +1,19 @@
 'use strict';
 
 const app = require('../app.js');
-const logic = require('./gametree_logic')
+const logic = require('./gametree_logic');
 
 const userScoreSuccess = (data) => {
   app.games = data.games;
-  $('.show-user-score').text(app.games.filter((obj) => { return obj.game_solved }).length);
+
+  $('.show-user-score').text(app.games.filter((obj) => { return obj.game_solved; }).length);
 };
 
 const createGameSuccess = (data) => {
   app.game = data.game;
 
   logic.gameSolved = false;
-  
+
   let solution = app.game.child_taxons;
   let tray = app.game.child_taxons.shuffled();
 
