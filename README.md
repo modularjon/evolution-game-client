@@ -47,29 +47,21 @@ https://github.com/modularjon/evolution-game-api
   A user would like to:
     • Sign up by using any name they like and providing a password
     • Get confirmation of a successful sign up
-
     • Sign in using a previously registed name and password
     • Hide sign up/ sign in forms on sign in and show sign out/change password
-
     • Clear sign up, sign in and change password fields after use for security
-
     • Start a new game
       - Populate the parent animal and game tray to enable play
       - Show a submit answer button
-
     • Click on a game tray option
       - Receive confimation of selection
       - Recieve direction to place in the game tree
-
     • Click in the tree to place a decendant
-
     • Receive a message to submit an answer when tree is full
-
     • Submit an answer
       - Receive a message encouraging the user to try again if incorrect
       - Visual confirmation of a correct answer
       - Add to games solved tally
-
     • Click a button to receive their total games solved score
 
 ## Future Development
@@ -81,14 +73,8 @@ structure will be a challenge.
   I'd also like to incorporate modals on a page load that descibe to the user
 what evolution and cladistics are, and how they can properly figure out how to
 solve a tree. This probably includes adding derived characters as an attribute
-to both the child and parent models. A nice option would be to dispay the
-derived character for each branch like so:
-                      _____________
-                      |           |
-DERIVED CHARACTER     |           |
-----------------------| organism  |
-                      |           |
-                      |___________|
+to both the child and parent models. A nice option would be to display the
+derived character for each branch along that branch's trunk.
 
   Finally, what got me started on this project was looking at
 https://tree.opentreeoflife.org/ It's an open source web application that
