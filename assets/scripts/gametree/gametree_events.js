@@ -33,6 +33,10 @@ const onTraySelect = function(event) {
 const onTreeSelect = function(event) {
   event.preventDefault();
 
+  if (logic.gameSolved || !app.user || !app.game) {
+    return;
+  }
+
   logic.tree[$(event.target).data('id')] = logic.selection;
   $(event.target).text(logic.selection);
   $('.game-message').text("Now pick another from the tray. When you've got them all filled, click submit!");
@@ -42,7 +46,7 @@ const onGameSubmit = function(event) {
   event.preventDefault();
 
   if(!logic.isGameSolved(logic.solution, logic.tree)) {
-    $('.game-message').text('Not quite. Reaarange and try again!');
+    $('.game-message').text('Not quite. Rearrange and try again!');
 
   } else {
     api.submitGame()
