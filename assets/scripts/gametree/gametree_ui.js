@@ -32,10 +32,17 @@ const createGameSuccess = (data) => {
   $('.tray[data-id="2"]').text(logic.tray[2]);
   $('.tray[data-id="3"]').text(logic.tray[3]);
   $('.child').text('');
-  $('.game-message').text('Select an animal from the tray to start.')
+  $('.game-message').text('Select an animal from the tray to start.');
+};
+
+const submitGameSuccess = (data) => {
+  logic.gameSolved = true;
+
+  $('.game-message').text('You got it! Start another game!');
 };
 
 module.exports = {
   userScoreSuccess,
   createGameSuccess,
+  submitGameSuccess,
 };
