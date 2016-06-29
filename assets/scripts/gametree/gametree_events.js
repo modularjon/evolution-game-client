@@ -38,11 +38,16 @@ const onTreeSelect = function(event) {
   $('.game-message').text("Now pick another from the tray. When you've got them all filled, click submit!");
 };
 
+const onGameSubmit = function(event) {
+
+};
+
 const addHandlers = () => {
   $('.get-user-score').on('click', onGetUserScore);
   $('.new-game').on('click', onCreateGame);
   $('.tray').on('click', onTraySelect);
   $('.child').on('click', onTreeSelect);
+  $('.submit-game').on('click', onGameSubmit);
 };
 
 module.exports = {
