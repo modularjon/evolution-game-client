@@ -41,13 +41,12 @@ const onTreeSelect = function(event) {
 const onGameSubmit = function(event) {
   event.preventDefault();
 
-  console.log(logic.solution);
-  console.log(logic.tree);
   if(!logic.isGameSolved(logic.solution, logic.tree)) {
     $('.game-message').text('Not quite. Reaarange and try again!');
+
   } else {
-    api.submitGame(logic.gameSolved)
-      .done(ui.updateGameSuccess)
+    api.submitGame()
+      .done(ui.submitGameSuccess)
       .fail(ui.failure);
   }
 };
