@@ -22,11 +22,11 @@ const createGame = () => {
   });
 };
 
-const updateGame = () => {
+const submitGame = () => {
   return $.ajax({
     url: app.host + '/games/' + app.game.id,
     method: 'PATCH',
-    data: { game_solved: true },
+    data: { "game": { "game_solved": "true" } },
     headers: {
       Authorization: 'Token token=' + app.user.token,
     },
@@ -36,5 +36,5 @@ const updateGame = () => {
 module.exports = {
   indexGames,
   createGame,
-  updateGame,
+  submitGame,
 };
