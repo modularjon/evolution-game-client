@@ -9,6 +9,12 @@ const userScoreSuccess = (data) => {
   $('.show-user-score').text(app.games.filter((obj) => { return obj.game_solved; }).length);
 };
 
+const resetUserScoreSuccess = (data) => {
+  app.games = data.games;
+
+  $('.show-user-score').text(app.games.filter((obj) => { return obj.game_solved; }).length);
+};
+
 const createGameSuccess = (data) => {
   app.game = data.game;
 
@@ -46,6 +52,7 @@ const submitGameSuccess = (data) => {
 
 module.exports = {
   userScoreSuccess,
+  resetUserScoreSuccess,
   createGameSuccess,
   submitGameSuccess,
 };
