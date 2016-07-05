@@ -33,8 +33,19 @@ const submitGame = () => {
   });
 };
 
+const resetGames = () => {
+  return $.ajax({
+    url: app.host + '/games/' + app.game.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  });
+};
+
 module.exports = {
   indexGames,
   createGame,
   submitGame,
+  resetGames,
 };
