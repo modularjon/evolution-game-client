@@ -12,6 +12,16 @@ const indexGames = () => {
   });
 };
 
+const resetGames = () => {
+  return $.ajax({
+    url: app.host + '/games/' + app.game.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  });
+};
+
 const createGame = () => {
   return $.ajax({
     url: app.host + '/games',
@@ -27,16 +37,6 @@ const submitGame = () => {
     url: app.host + '/games/' + app.game.id,
     method: 'PATCH',
     data: { "game": { "game_solved": "true" } },
-    headers: {
-      Authorization: 'Token token=' + app.user.token,
-    },
-  });
-};
-
-const resetGames = () => {
-  return $.ajax({
-    url: app.host + '/games/' + app.game.id,
-    method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + app.user.token,
     },
