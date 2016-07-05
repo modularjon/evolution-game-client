@@ -12,6 +12,13 @@ const onGetUserScore = function(event) {
     .fail(ui.failure);
 };
 
+const onResetUserScore = function(event) {
+  event.preventDefault();
+  api.resetGames()
+    .done(ui.resetUserScoreSuccess)
+    .fail(ui.failure);
+};
+
 const onCreateGame = function(event) {
   event.preventDefault();
   api.createGame()
@@ -57,6 +64,7 @@ const onGameSubmit = function(event) {
 
 const addHandlers = () => {
   $('.get-user-score').on('click', onGetUserScore);
+  $('.reset-user-score').on('click', onResetUserScore);
   $('.new-game').on('click', onCreateGame);
   $('.tray').on('click', onTraySelect);
   $('.child').on('click', onTreeSelect);
