@@ -9,10 +9,17 @@ const userScoreSuccess = (data) => {
   $('.show-user-score').text(app.games.filter((obj) => { return obj.game_solved; }).length);
 };
 
-const resetUserScoreSuccess = (data) => {
-  app.games = data.games;
+const resetUserScoreSuccess = () => {
+  app.game = null;
+  logic.gameSolved = false;
 
-  $('.show-user-score').text(app.games.filter((obj) => { return obj.game_solved; }).length);
+  $('.parent').text('');
+  $('.tray[data-id="0"]').text('');
+  $('.tray[data-id="1"]').text('');
+  $('.tray[data-id="2"]').text('');
+  $('.tray[data-id="3"]').text('');
+  $('.child').text('');
+  $('.game-message').text('Game reset. Start a new one!');
 };
 
 const createGameSuccess = (data) => {
