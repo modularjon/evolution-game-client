@@ -14,7 +14,12 @@ const onGetUserScore = function(event) {
 
 const onResetUserScore = function(event) {
   event.preventDefault();
-  api.resetGames()
+
+  if (logic.gameSolved || !app.user || !app.game) {
+    return;
+  }
+
+  api.resetGame()
     .done(ui.resetUserScoreSuccess)
     .fail(ui.failure);
 };
@@ -51,6 +56,10 @@ const onTreeSelect = function(event) {
 
 const onGameSubmit = function(event) {
   event.preventDefault();
+
+  if (logic.gameSolved || !app.user || !app.game) {
+    return;
+  }
 
   if(!logic.isGameSolved(logic.solution, logic.tree)) {
     $('.game-message').text('Not quite. Rearrange and try again!');
