@@ -12,7 +12,7 @@ const indexGames = () => {
   });
 };
 
-const resetGames = () => {
+const resetGame = () => {
   return $.ajax({
     url: app.host + '/games/' + app.game.id,
     method: 'DELETE',
@@ -47,5 +47,5 @@ module.exports = {
   indexGames,
   createGame,
   submitGame,
-  resetGames,
+  resetGame,
 };
