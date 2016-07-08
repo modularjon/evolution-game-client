@@ -6,6 +6,8 @@ $font-color: #0c0c0c;
 body {
   background-color: $background-color;
   color: $font-color;
+  padding-bottom: 20px;
+  padding-top: 50px;
 }
 
 button,
@@ -13,25 +15,7 @@ form,
 input,
 legend {
   float: left;
-  font-size: 2vw;
-}
-
-.gametree {
-  margin-left: 6vw;
-  margin-top: 9vw;
-}
-
-.tray,
-.child,
-.parent {
-  border-radius: 8vw;
-  font-size: 3vw;
-  padding-top: 5vw;
-}
-
-.shift {
-  left: 6vw;
-  position: relative;
+  margin: 12px;
 }
 
 .row-centered {
@@ -46,22 +30,38 @@ legend {
   text-align: center;
 }
 
-.game-info {
-  padding-left: 6vw;
+.game-message {
+  font-size: 36px;
+  height: 120px;
+  padding-top: 12px;
 }
 
-.game-message {
-  font-size: 3vw;
-  height: 14vw;
-  padding-top: 4vw;
+.game-buttons {
+  margin-top: 36px;
 }
 
 .signed-in {
-  font-size: 3vw;
+  font-size: 24px;
 }
 
-.show-user-score {
-  font-size: 3vw;
+.gameboard {
+  margin-left: 6vw;
+  margin-top: 9vw;
+  // transform: rotate(-45deg);
+}
+
+.tray,
+.child,
+.parent {
+  border-radius: 8vw;
+  font-size: 2vw;
+  padding-top: 5vw;
+  // transform: rotate(45deg);
+}
+
+.shift {
+  left: 6vw;
+  position: relative;
 }
 
 .top {
