@@ -6,7 +6,7 @@ const logic = require('./gametree_logic');
 const userScoreSuccess = (data) => {
   app.games = data.games;
 
-  $('.show-user-score').text(app.games.filter((obj) => { return obj.game_solved; }).length);
+  $('.game-message').text("You\'ve solved " + app.games.filter((obj) => { return obj.game_solved; }).length + " games.");
 };
 
 const resetUserScoreSuccess = () => {
