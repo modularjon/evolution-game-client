@@ -18,8 +18,8 @@ const failure = (error) => {
 };
 
 const signUpSuccess = function() {
-  $('.game-message').text("Signed up!");
-  $('form').trigger('reset');
+  // $('.game-message').text("Signed up!");
+  // $('form').trigger('reset');
 };
 
 const signInSuccess = (data) => {
