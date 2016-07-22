@@ -3,10 +3,18 @@
 const app = require('../app.js');
 
 const signUp = (data) => {
-  return $.ajax({
-    url: app.host + '/sign-up',
-    method: "POST",
-    data
+  return new Promise((resolve, reject) => {
+    return $.ajax({
+      url: app.host + '/sign-up',
+      method: "POST",
+      data,
+      success: (response) => {
+        resolve(response);
+      },
+      error: (error) => {
+        reject(error);
+      },
+    });
   });
 };
 
