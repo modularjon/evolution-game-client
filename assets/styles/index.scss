@@ -6,8 +6,8 @@ $font-color: #0c0c0c;
 body {
   background-color: $background-color;
   color: $font-color;
-  padding-bottom: 20px;
-  padding-top: 50px;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 button,
@@ -15,7 +15,12 @@ form,
 input,
 legend {
   float: left;
-  margin: 12px;
+  font-size: 12px;
+  margin: 6px;
+}
+
+.form-control {
+  padding: 2px 6px;
 }
 
 .row-centered {
@@ -31,8 +36,7 @@ legend {
 }
 
 .game-message {
-  font-size: 36px;
-  height: 120px;
+  font-size: 24px;
   padding-top: 12px;
 }
 
