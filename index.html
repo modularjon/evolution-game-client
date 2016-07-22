@@ -9,7 +9,61 @@
 </head>
 
 <body class="container-fluid">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <form class="navbar-form navbar-left sign-up">
+          <div class="form-inline">
+            <fieldset>
+              <input class="form-control" type="submit" name="submit" value="Sign up">
+              <input class="form-control" type="text" name="credentials[email]" placeholder="Enter your email">
+              <input class="form-control" type="password" name="credentials[password]" placeholder="Enter your password">
+              <input class="form-control" type="password" name="credentials[password_confirmation]" placeholder="Password again">
+            </fieldset>
+          </div>
+        </form>
+        <form class="navbar-form navbar-left sign-in">
+          <div class="form-inline">
+            <fieldset>
+              <input class="form-control" type="submit" name="submit" value="Sign in">
+              <input class="form-control" type="text" name="credentials[email]" placeholder="Enter your email">
+              <input class="form-control" type="password" name="credentials[password]" placeholder="Enter your password">
+            </fieldset>
+          </div>
+        </form>
+        <form class="navbar-form navbar-left sign-out" style="display: none">
+          <div class="form-inline">
+            <fieldset>
+              <input class="form-control" type="submit" name="submit" value="Sign out">
+            </fieldset>
+          </div>
+        </form>
+        <form class="navbar-form navbar-right change-password" style="display: none">
+          <div class="form-inline">
+            <fieldset>
+              <input class="form-control" type="submit" name="submit" value="Change password">
+              <input class="form-control" type="password" name="passwords[old]" placeholder="Old password">
+              <input class="form-control" type="password" name="passwords[new]" placeholder="New password">
+            </fieldset>
+          </div>
+        </form>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <div class="signed-in"></div>
   <div class="jumbotron">
     <div class="container">
       <h1>Cladistic Evolution</h1>
@@ -17,50 +71,7 @@
     </div>
   </div>
 
-  <form class="sign-up">
-    <div class="form-inline">
-      <fieldset>
-        <legend>Sign up</legend>
-        <input class="form-control" type="text" name="credentials[email]" placeholder="Enter your email!">
-        <input class="form-control" type="password" name="credentials[password]" placeholder="Enter your password!">
-        <input class="form-control" type="password" name="credentials[password_confirmation]" placeholder="Password again!">
-        <input class="form-control" type="submit" name="submit" value="Sign up!">
-      </fieldset>
-    </div>
-  </form>
 
-  <form class="sign-in">
-    <div class="form-inline">
-      <fieldset>
-        <legend>Sign in</legend>
-        <input class="form-control" type="text" name="credentials[email]" placeholder="Enter your email!">
-        <input class="form-control" type="password" name="credentials[password]" placeholder="Enter your password!">
-        <input class="form-control" type="submit" name="submit" value="Sign in!">
-      </fieldset>
-    </div>
-  </form>
-
-  <div class="signed-in"></div>
-
-  <form class="sign-out" style="display: none">
-    <div class="form-inline">
-      <fieldset>
-        <legend>Sign out</legend>
-        <input class="form-control" type="submit" name="submit" value="Sign out!">
-      </fieldset>
-    </div>
-  </form>
-
-  <form class="change-password" style="display: none">
-    <div class="form-inline">
-      <fieldset>
-        <legend>Change password</legend>
-        <input class="form-control" type="password" name="passwords[old]" placeholder="Old password!">
-        <input class="form-control" type="password" name="passwords[new]" placeholder="New password!">
-        <input class="form-control" type="submit" name="submit" value="Change it!">
-      </fieldset>
-    </div>
-  </form>
 
   <div class="game-interaction col-xs-12">
     <div class="row">
@@ -76,47 +87,47 @@
 
   <div class="gameboard col-xs-10 col-centered">
     <div class="gametree">
-    <div class="row row-centered">
-      <div class="col-xs-2 col-centered top right bottom left child" data-id="3"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered top right left tray" data-id="0"></div>
+      <div class="row row-centered">
+        <div class="col-xs-2 col-centered top right bottom left child" data-id="3"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered top right left tray" data-id="0"></div>
+      </div>
+      <div class="row row-centered">
+        <div class="col-xs-2 col-centered shift left bottom"></div>
+        <div class="col-xs-2 col-centered top right bottom left child" data-id="2"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered right left tray" data-id="1"></div>
+      </div>
+      <div class="row row-centered">
+        <div class="col-xs-2 col-centered shift left bottom"></div>
+        <div class="col-xs-2 col-centered shift bottom"></div>
+        <div class="col-xs-2 col-centered top right bottom left child" data-id="1"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered right left tray" data-id="2"></div>
+      </div>
+      <div class="row row-centered">
+        <div class="col-xs-2 col-centered shift left bottom"></div>
+        <div class="col-xs-2 col-centered shift bottom"></div>
+        <div class="col-xs-2 col-centered shift bottom"></div>
+        <div class="col-xs-2 col-centered top right bottom left child" data-id="0"></div>
+        <div class="col-xs-2 col-centered "></div>
+        <div class="col-xs-2 col-centered right bottom left tray" data-id="3"></div>
+      </div>
+      <div class="row row-centered">
+        <div class="col-xs-2 col-centered right bottom left parent"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered"></div>
+        <div class="col-xs-2 col-centered"></div>
+      </div>
     </div>
-    <div class="row row-centered">
-      <div class="col-xs-2 col-centered shift left bottom"></div>
-      <div class="col-xs-2 col-centered top right bottom left child" data-id="2"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered right left tray" data-id="1"></div>
-    </div>
-    <div class="row row-centered">
-      <div class="col-xs-2 col-centered shift left bottom"></div>
-      <div class="col-xs-2 col-centered shift bottom"></div>
-      <div class="col-xs-2 col-centered top right bottom left child" data-id="1"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered right left tray" data-id="2"></div>
-    </div>
-    <div class="row row-centered">
-      <div class="col-xs-2 col-centered shift left bottom"></div>
-      <div class="col-xs-2 col-centered shift bottom"></div>
-      <div class="col-xs-2 col-centered shift bottom"></div>
-      <div class="col-xs-2 col-centered top right bottom left child" data-id="0"></div>
-      <div class="col-xs-2 col-centered "></div>
-      <div class="col-xs-2 col-centered right bottom left tray" data-id="3"></div>
-    </div>
-    <div class="row row-centered">
-      <div class="col-xs-2 col-centered right bottom left parent"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered"></div>
-      <div class="col-xs-2 col-centered"></div>
-    </div>
-  </div>
   </div>
 
 </body>
